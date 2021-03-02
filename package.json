@@ -1,26 +1,16 @@
+
+
 {
-  "name": "Brief_Soundboard",
+  "name": "Brief_SoundBoard",
   "version": "1.0.0",
   "description": "",
-  "main": "js/script.js",
- 
-      "scripts": {
-        "dev": "parcel index.html",
-        "build": "parcel build index.html"
-      }
-    },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Cmfauvel/Brief_Soundboard.git"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Cmfauvel/Brief_Soundboard/issues"
-  },
-  "homepage": "https://github.com/Cmfauvel/Brief_Soundboard#readme",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  }
+  "license": "ISC"
 }
