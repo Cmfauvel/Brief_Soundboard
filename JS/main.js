@@ -6,7 +6,8 @@
 import classes from '../css/style.css';
 
 export default () => {
-  console.log(classes.style);
+
+  //console.log(classes.style);
 };
 
 //Pour que lorsque parcel se met à jour il ne garde pas les anciennes informations
@@ -16,5 +17,9 @@ if (module.hot) {
     module.hot.accept(function () {
         window.location.reload()
     })
-}
+};
+
+
+
+
 

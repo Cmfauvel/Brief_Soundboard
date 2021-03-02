@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/style.css":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/main.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -204,8 +204,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //const designBouton = "";
 //export default designBouton;
 // import d'un module CSS
-var _default = function _default() {
-  console.log(_style.default.style);
+var _default = function _default() {//console.log(classes.style);
 }; //Pour que lorsque parcel se met à jour il ne garde pas les anciennes informations
 //mais remplace l'ancienne valeur par la nouvelle
 //j'inscris la méthode suivante
@@ -218,6 +217,8 @@ if (module.hot) {
     window.location.reload();
   });
 }
+
+;
 },{"../css/style.css":"css/style.css"}],"js/script.js":[function(require,module,exports) {
 "use strict";
 
@@ -231,6 +232,133 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //console.log(designBouton)
 //cet import export permet de lier les deux fichiers 
 (0, _main.default)();
+console.log(_main.default); //-----------------Initiation touche a
+
+var btnPresse1 = document.getElementById('btn__sound-1');
+var sound1 = document.getElementById('audiotag_a');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 65) {
+    sound1.play();
+    btnPresse1.classList.add('en_ecoute');
+    console.log(event);
+
+    sound1.onended = function () {
+      btnPresse1.classList.remove('en_ecoute');
+    };
+  }
+}); //-----------------Initiation touche z
+
+var btnPresse2 = document.getElementById('btn__sound-2');
+var sound2 = document.getElementById('audiotag_z');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 90) {
+    sound2.play();
+    btnPresse2.classList.add('en_ecoute');
+    console.log(event);
+
+    sound2.onended = function () {
+      btnPresse2.classList.remove('en_ecoute');
+    };
+  }
+}); //-----------------Initiation touche e
+
+var btnPresse3 = document.getElementById('btn__sound-3');
+var sound3 = document.getElementById('audiotag_e');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 69) {
+    sound3.play();
+    btnPresse3.classList.add('en_ecoute');
+    console.log(event);
+
+    sound3.onended = function () {
+      btnPresse3.classList.remove('en_ecoute');
+    };
+  }
+}); //-----------------Initiation touche r
+
+var btnPresse4 = document.getElementById('btn__sound-4');
+var sound4 = document.getElementById('audiotag_r');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 82) {
+    sound4.play();
+    btnPresse4.classList.add('en_ecoute');
+    console.log(event);
+
+    sound4.onended = function () {
+      btnPresse4.classList.remove('en_ecoute');
+    };
+  }
+}); //-----------------Initiation touche t
+
+var btnPresse5 = document.getElementById('btn__sound-5');
+var sound5 = document.getElementById('audiotag_t');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 84) {
+    sound5.play();
+    btnPresse5.classList.add('en_ecoute');
+    console.log(event);
+
+    sound5.onended = function () {
+      btnPresse5.classList.remove('en_ecoute');
+    };
+  }
+}); //-----------------Initiation touche y
+
+var btnPresse6 = document.getElementById('btn__sound-6');
+var sound6 = document.getElementById('audiotag_y');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 89) {
+    sound6.play();
+    btnPresse6.classList.add('en_ecoute');
+    console.log(event);
+
+    sound6.onended = function () {
+      btnPresse6.classList.remove('en_ecoute');
+    };
+  }
+}); //-----------------Initiation touche u
+
+var btnPresse7 = document.getElementById('btn__sound-7');
+var sound7 = document.getElementById('audiotag_u');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 85) {
+    sound7.play();
+    btnPresse7.classList.add('en_ecoute');
+    console.log(event);
+
+    sound7.onended = function () {
+      btnPresse7.classList.remove('en_ecoute');
+    };
+  }
+}); //-----------------Initiation touche i
+
+var btnPresse8 = document.getElementById('btn__sound-8');
+var sound8 = document.getElementById('audiotag_i');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 73) {
+    sound8.play();
+    btnPresse8.classList.add('en_ecoute');
+    console.log(event);
+
+    sound8.onended = function () {
+      btnPresse8.classList.remove('en_ecoute');
+    };
+  }
+}); //-----------------Initiation touche o
+
+var btnPresse9 = document.getElementById('btn__sound-9');
+var sound9 = document.getElementById('audiotag_o');
+document.addEventListener("keydown", function (event) {
+  if (event.keyCode == 79) {
+    sound9.play();
+    btnPresse9.classList.add('en_ecoute');
+    console.log(event);
+
+    sound9.onended = function () {
+      btnPresse9.classList.remove('en_ecoute');
+    };
+  }
+});
 },{"./main":"js/main.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

@@ -1,2 +1,21 @@
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-container {
+    width: 33%;
+    height: 33%;
+}
+
+
+.en_ecoute {
+    background-color: red;
+}
 
 /*# sourceMappingURL=/script.d573be0b.css.map */
