@@ -5,8 +5,8 @@
   "main": "js/script.js",
  
       "scripts": {
-        "dev": "parcel <your entry file>",
-        "build": "parcel build <your entry file>"
+        "dev": "parcel index.html",
+        "build": "parcel build index.html"
       }
     },
   "repository": {
