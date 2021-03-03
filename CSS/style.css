@@ -1,19 +1,51 @@
+body {
+    margin: 0;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgb(131, 195, 233), #253e55)
+
+}
 section {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
+    height: 100%;   
 }
 
 .btn-container {
-    width: 33%;
-    height: 33%;
+        
+        width: 33%;
+        text-align: center;
+        -webkit-animation:;
+}
+
+button {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    height: 70px;
+    background-color: rgb(75, 51, 128);
+    border-color: rgb(52, 6, 78) ;
+    
+        
 }
 
 
 .en_ecoute {
-    background-color: red;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+}
+
+@media screen and (max-width: 800px) {
+    .btn-container {
+        width: 50%;
+    }
 }
