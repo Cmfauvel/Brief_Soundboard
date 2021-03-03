@@ -117,22 +117,29 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/script.js":[function(require,module,exports) {
+})({"node_modules/main/index.js":[function(require,module,exports) {
+module.exports = function run(currentModule, callback) {
+  if (currentModule.parent !== null) {
+    return;
+  }
+
+  callback();
+};
+
+module.exports.default = module.exports;
+
+},{}],"js/script.js":[function(require,module,exports) {
+"use strict";
+
+var _main = _interopRequireDefault(require("main"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 //ici 
 //import nomDuModule './nomDuModule'
-//import designBouton './designBouton'
-//console.log(designBouton)
 //cet import export permet de lier les deux fichiers 
-// import main from 'main';
-// main();
-// console.log(main);
-//Essai avec Switch
-// document.addEventListener("keydown", event => {
-//     switch (sonDeclenche) {
-//     case event.keyCode == 65 : 
-// });
-// }
-//Idée : créer des tableaux pour créer un objet
+(0, _main.default)();
+console.log(_main.default);
 var btnPresse1 = document.getElementById('btn__sound-1');
 var sound1 = document.getElementById('audiotag_a');
 var btnPresse2 = document.getElementById('btn__sound-2');
@@ -324,7 +331,7 @@ document.addEventListener("keydown", function (event) {
 //       }
 //     }
 // });
-},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"main":"node_modules/main/index.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -352,7 +359,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64314" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51301" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

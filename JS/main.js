@@ -5,8 +5,8 @@
 // import d'un module CSS
 import classes from '../css/style.css';
 
-export default () => {
-
+export default() {
+ 
   //console.log(classes.style);
 };
 

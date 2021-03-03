@@ -1,23 +1,12 @@
 //ici 
 //import nomDuModule './nomDuModule'
-//import designBouton './designBouton'
-//console.log(designBouton)
 //cet import export permet de lier les deux fichiers 
-// import main from 'main';
+import main from 'main';
 
-// main();
-// console.log(main);
+main();
+console.log(main);
 
-//Essai avec Switch
 
-// document.addEventListener("keydown", event => {
-//     switch (sonDeclenche) {
-//     case event.keyCode == 65 : 
-      
-// });
-
-// }
-//Idée : créer des tableaux pour créer un objet
 
 let btnPresse1 = document.getElementById('btn__sound-1');
 let sound1 = document.getElementById('audiotag_a');
@@ -57,22 +46,23 @@ let tab = [{key : 'a', sound : sound1, bouton : btnPresse1},
            {key : 'o', sound : sound9, bouton : btnPresse9}];
            console.log(tab)
  
-
-document.addEventListener("keydown", event => {
+           document.addEventListener("keydown", event => {
   
-      for(let i = 0; i < tab.length; i++) {
-        
-        if(event.key == tab[i].key ) {
-          console.log()
-      tab[i].sound.currentTime=0;
-      tab[i].sound.play();
-      tab[i].bouton.classList.add('en_ecoute');
-      tab[i].sound.onended = function() {
-      tab[i].bouton.classList.remove('en_ecoute')
-      }
-    }
-  }
-  })
+            for(let i = 0; i < tab.length; i++) {
+              
+              if(event.key == tab[i].key ) {
+                console.log()
+            tab[i].sound.currentTime=0;
+            tab[i].sound.play();
+            tab[i].bouton.classList.add('en_ecoute');
+            tab[i].sound.onended = function() {
+            tab[i].bouton.classList.remove('en_ecoute')
+            }
+          }
+        }
+        })
+
+
 
 
 // //-----------------Initiation touche a
